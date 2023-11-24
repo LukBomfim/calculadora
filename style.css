@@ -1,0 +1,119 @@
+html{
+    height: 100%;
+    box-sizing: border-box;
+}
+body{
+    background: linear-gradient(320deg, #01c594, #80d7ff, rgb(230, 228, 255));
+    text-align: center;
+    font: normal 20pt Arial;
+}
+
+h1{
+    font: normal 40pt 'Segoe Script';
+}
+section{
+    display: flex;
+    justify-content: center;
+}
+
+#area{
+    background-color: rgba(255, 255, 255, 0.301);
+    width: 390px;
+    border-radius: 30px;
+    height: 300px;
+    text-align: left;
+    font: normal 30pt Arial;
+}
+#n1{
+    margin-top: 40px;
+    margin-bottom: -5px;
+}
+.Num{
+    margin-left: 50px;
+    margin-top: 10px;
+    font: bold 30px Arial;
+    width: 190px;
+    border: 0px;
+    border-radius: 10px;
+    height: 50px;
+    background-color: rgba(255, 255, 255, 0.863); 
+    text-align: center;
+    margin-bottom: 10px;
+} 
+.Num::placeholder{
+    color: rgb(100, 100, 100);
+    font: bold 17px Arial;
+}
+
+/* CÓDIGO ABAIXO PARA RETIRAR AS SETAS DE INCREMETO/DECREMENTO NO INPUT NUMBER */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+
+/* BOTÃO DAS OPERAÇÕES */
+.op{
+    height: 50px;
+    font: bold 20pt Arial;
+    color: blue;
+    width: 40px;
+    border-radius: 10px;
+    border-color: blue;
+    background-color: rgba(100, 100, 100, 0);
+    transition: 0.2s;
+}
+.op:hover{
+    color: white;
+    background-color: blue;
+    transition: 0.4s;
+}
+#soma{
+    margin-left: 50px;
+}
+
+#result{
+    display: inline;
+    margin:0px;
+    margin-left: -5px;
+    border-radius: 10px;
+    font: bold 30pt 'ISOCP Regular';
+    background-color: rgba(0, 0, 255, 0.171);
+}
+
+
+
+
+/* BOTÃO LIMPAR */
+#botaoLimpar{
+    border-color: red;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0);
+    margin-left: 50px;
+    width: 185px;
+}
+#botaoLimpar:hover{
+    background-color: red;
+    transition: 0.4s;
+}
+#imgLimpar{
+    height: 30px;
+}
+
+/* LINK DE CRÉDITO */ 
+footer{
+    margin: 30px;
+}
+a{
+    color: black;
+    font-size: 20px;
+    font-style: italic;
+    text-decoration: none;
+    transition: 0.2s;
+}
+a:hover{
+    color: rgb(57, 54, 255);
+    text-decoration: underline;
+    transition: 0.3s;
+}

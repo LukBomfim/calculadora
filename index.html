@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha384-o3udY8+o93nnQKuSe8U5dKjnS0W0EnqCTbLoo5pPTQGwWIgdFDyFiFPz/KLbdOy" crossorigin="anonymous">
+</head>
+<body>
+    <header>
+        <h1>Calculadora</h1>
+    </header>
+    <section>
+        <div id="area">
+            <input class="Num" type="number" name="n1" id="n1" placeholder="1° Número"> 
+            <!-- Número 1 -->
+
+            <br>
+            <button class="op" id="soma" onclick="op(); soma()">+</button>
+            <button class="op" id="subtracao" onclick="op(); subtracao()">-</button> 
+            <button class="op" id="multiplicacao" onclick="op(); multiplicacao()">×</button>
+            <button class="op" id="divisao" onclick="op(); divisao()">÷</button> 
+            
+            =
+            <div id="result">0</div>
+            <!-- Resultado -->
+            <br>
+            <!-- Botões das operações -->
+
+            <input class="Num" type="number" name="n2" id="n2" placeholder="2° Número">
+            <!-- Número 2 -->
+
+            <br>
+            <button id="botaoLimpar" onclick="limpar()">
+                <img id="imgLimpar" src="limpar.png" alt="Limpar">
+            </button>
+            <!-- Botão para limpar tudo -->
+        </div>
+
+    </section>
+    <footer>
+            <a href="https://www.instagram.com/luk.bomfim/" target="_blank">&copy; luk.bomfim</a>
+    </footer>
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>
