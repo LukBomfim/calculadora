@@ -4,8 +4,127 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadora</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha384-o3udY8+o93nnQKuSe8U5dKjnS0W0EnqCTbLoo5pPTQGwWIgdFDyFiFPz/KLbdOy" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan&display=swap" rel="stylesheet">
+    <style>
+        html{
+            height: 100%;
+            box-sizing: border-box;
+        }
+        body{
+            background: linear-gradient(320deg, #01c594, #80d7ff, rgb(230, 228, 255));
+            text-align: center;
+            font: normal 20pt Arial;
+        }
+
+        h1{
+            font-size: 30pt;
+            font-family: 'League Spartan', sans-serif;
+        }
+        section{
+            display: flex;
+            justify-content: center;
+        }
+
+        #area{
+            background-color: rgba(255, 255, 255, 0.301);
+            width: 350px;
+            border-radius: 30px;
+            height: 300px;
+            text-align: left;
+            font: normal 30pt Arial;
+        }
+        #n1{
+            margin-top: 40px;
+        }
+        .Num{
+            margin-left: 50px;
+            margin-top: 10px;
+            font: bold 30px Arial;
+            width: 190px;
+            border: 0px;
+            border-radius: 10px;
+            height: 50px;
+            background-color: rgba(255, 255, 255, 0.863); 
+            text-align: center;
+            margin-bottom: 10px;
+        } 
+        .Num::placeholder{
+            color: rgb(100, 100, 100);
+            font: bold 17px Arial;
+        }
+
+        /* CÓDIGO ABAIXO PARA RETIRAR AS SETAS DE INCREMETO/DECREMENTO NO INPUT NUMBER */
+        input[type="number"]::-webkit-inner-spin-button,
+        input[type="number"]::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+        }
+
+
+        /* BOTÃO DAS OPERAÇÕES */
+        .op{
+            height: 50px;
+            font: bold 20pt Arial;
+            color: blue;
+            width: 40px;
+            border-radius: 10px;
+            border-color: blue;
+            background-color: rgba(100, 100, 100, 0);
+            transition: 0.2s;
+        }
+        .op:hover{
+            color: white;
+            background-color: blue;
+            transition: 0.4s;
+        }
+        #soma{
+            margin-left: 50px;
+        }
+
+        #result{
+            display: inline;
+            margin-left: -5px;
+            border-radius: 10px;
+            font-size: 30pt;
+            font-family: 'League Spartan', sans-serif;
+            background-color: rgba(0, 0, 255, 0.171);
+        }
+
+        /* BOTÃO LIMPAR */
+        #botaoLimpar{
+            border-color: red;
+            border-radius: 10px;
+            background-color: rgba(255, 255, 255, 0);
+            margin-left: 50px;
+            width: 195px;
+        }
+        #botaoLimpar:hover{
+            background-color: red;
+            transition: 0.4s;
+        }
+        #imgLimpar{
+            height: 30px;
+        }
+
+        /* LINK DE CRÉDITO */ 
+        footer{
+            margin: 30px;
+        }
+        a{
+            color: black;
+            font-size: 20px;
+            font-style: italic;
+            text-decoration: none;
+            transition: 0.2s;
+        }
+        a:hover{
+            color: rgb(57, 54, 255);
+            text-decoration: underline;
+            transition: 0.3s;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -45,6 +164,43 @@
 
 
 
-    <script src="script.js"></script>
+    <script>
+        function limpar(){
+            var n1txt = document.getElementById("n1")
+            var n2txt = document.getElementById("n2")
+            var result = document.getElementById("result")
+
+            n1txt.value = ''
+            n2txt.value = ''
+            result.innerHTML = 0
+        }
+
+        function op(){
+            var n1 = document.getElementById("n1")
+            var n2 = document.getElementById("n2")
+            var result = document.getElementById("result")
+            
+        }
+
+        // FUNÇÕES DAS OPERAÇÕES ABAIXO
+
+        function soma(){
+            result.innerHTML = Number(n1.value) + Number(n2.value)
+        } 
+        function subtracao(){
+            result.innerHTML = Number(n1.value) - Number(n2.value)
+        }
+        function multiplicacao(){
+            result.innerHTML = Number(n1.value) * Number(n2.value)
+        }
+        function divisao(){
+            var divi  = Number(n1.value) / Number(n2.value)
+            if (isNaN(divi)){
+                result.innerHTML = 0
+            } else if (isFinite(divi)){
+                result.innerHTML = divi
+            }
+        }
+    </script>
 </body>
 </html>
